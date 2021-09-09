@@ -104,7 +104,7 @@ html {
   box-sizing: border-box;
   padding: 0 25px;
   background: var(--nav-back);
-  box-shadow: #000;
+  /* box-shadow: #000; */
   /* background: var(--nav-back); */
 }
 .name {
@@ -198,6 +198,7 @@ html {
 @media (max-width: 900px) {
   .navbar .mainMenu {
     height: 100vh;
+    width: 100%;
     position: fixed;
     top: 0;
     right: 0;
@@ -252,11 +253,11 @@ html {
   background-position: 0 -90px;
   display: flex;
   /* justify-content: space-between; */
-  /* align-items: center; */
+  align-items: center;
 }
 
 .text {
-  top: 150px;
+  top: -50px;
   height: 250px;
   width: 600px;
   position: relative;
@@ -302,7 +303,7 @@ html {
 
 .gif {
   position: relative;
-  top: 80px;
+  top: -20px;
 }
 
 @media (max-width: 900px) {
@@ -310,9 +311,15 @@ html {
     justify-content: space-between;
     flex-direction: column;
   }
+  .Home .text {
+    top: 100px;
+  }
   .Home .text h2,
   h3 {
     color: #fff;
+  }
+  .gif {
+    display: none;
   }
 
 }
@@ -355,7 +362,7 @@ html {
 	background: var(--bg-toggle);
 	color: var(--nav-text);
 	position: fixed;
-	bottom: 40px;
+	bottom: 30px;
 	left: -65px;
 	box-shadow: 4px 4px 1em rgba(0, 0, 0, 0.5);
 	display: flex;
@@ -422,7 +429,7 @@ html {
   background: #fff;
   border-radius: 50%;
   bottom: 40px;
-  right: 50px;
+  right: 30px;
   box-shadow: 4px 4px 1em rgba(0, 0, 0, 0.5);
   text-decoration: none;
   text-align: center;
