@@ -113,3 +113,14 @@ $(document).ready(function () {
 //         contactbtn.classList.remove('active');
 //     }
 // }
+
+
+
+
+// Toggle Switch
+// const toggle = document.querySelector('#toggle');
+
+// toggle.addEventListener('change' => (){
+
+// } );
+// Toggle Switch

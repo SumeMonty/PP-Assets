@@ -346,3 +346,18 @@ html {
   background: var(--body-back);
 }
 /* *******************Contact End****************** */
+
+
+/* *******************Toggle Switch****************** */
+
+.dark-light-toggle {
+  position: fixed;
+  height: 40px;
+  width: 70px;
+  background-color: #000;
+  box-sizing: border-box;
+  box-shadow: rgba(0,0,0,0.9);
+}
+
+/* *******************Toggle Switch End****************** */
+
