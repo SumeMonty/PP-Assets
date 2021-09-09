@@ -120,20 +120,25 @@ let body = document.querySelector('body');
 let sun = document.querySelector('#sun');
 let moon = document.querySelector('#moon');
 let toggle = document.querySelector('#toggle');
+let togglediv = document.querySelector('.dark-light-toggle');
+let topbtn = document.querySelector('.movetotop');
 
-toggle.addEventListener('change',function(){
-  if(this.checked){
+toggle.addEventListener('change', function () {
+  if (this.checked) {
     body.classList.remove('light');
     body.classList.add('dark');
-    moon.style.display = 'block';
-    sun.style.display = 'none';
+    moon.style.display = 'none';
+    sun.style.display = 'block';
+    togglediv.style.boxShadow = '4px 0 1em 4px rgba(255, 255, 255, 0.5)';
+    topbtn.style.boxShadow = '0 0 1em 5px rgba(255, 255, 255, 0.5)';
   }
-  else
-  {
+  else {
     body.classList.remove('dark');
-    body.classList.add('dark');
+    body.classList.add('light');
     moon.style.display = 'block';
     sun.style.display = 'none';
+    togglediv.style.boxShadow = '4px 0 1em 4px rgba(0, 0, 0, 0.5)';
+    topbtn.style.boxShadow = '0 0 1em 5px rgba(0, 0, 0, 0.5)';
   }
 })
 
