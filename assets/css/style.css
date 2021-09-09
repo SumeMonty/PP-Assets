@@ -196,9 +196,6 @@ html {
 }
 
 @media (max-width: 900px) {
-  .navbar {
-    background: url("../img/bg2.jpeg");
-  }
   .navbar .mainMenu {
     height: 100vh;
     position: fixed;
@@ -310,13 +307,14 @@ html {
 
 @media (max-width: 900px) {
   .Home {
-    background-image: url("../img/bg2.jpeg");
-    background-size: cover;
+    justify-content: space-between;
+    flex-direction: column;
   }
   .Home .text h2,
   h3 {
     color: #fff;
   }
+
 }
 /* *******************Home End****************** */
 
@@ -351,12 +349,86 @@ html {
 /* *******************Toggle Switch****************** */
 
 .dark-light-toggle {
+	width: 150px;
+	height: 70px;
+	border-radius: 35px;
+	background: var(--bg-toggle);
+	color: var(--nav-text);
+	position: fixed;
+	bottom: 40px;
+	left: -65px;
+	box-shadow: 4px 4px 1em rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+
+.dark-light-toggle input {
+	display: none;
+}
+
+.dark-light-toggle label {
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	border: none;
+	border-radius: 50%;
+	margin-right: 15px;
+	background-color: var(--bg-toggle);
+	color: var(--nav-text);
+	cursor: pointer;
+	transition: all .5s ease;
+}
+
+#sun {
+	display: none;
+}
+
+#moon {
+	display: block;
+}
+
+/* .topBtn {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 50%;
+	background: var(--bg-toggle);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 4px 4px 1em rgba(0, 0, 0, 0.5);
+	transition: all .5s ease;
+	cursor: pointer;
+}
+
+.topBtn i {
+	font-size: 27px;
+	color: var(--nav-text);
+} */
+
+.movetotop{
   position: fixed;
-  height: 40px;
-  width: 70px;
-  background-color: #000;
-  box-sizing: border-box;
-  box-shadow: rgba(0,0,0,0.9);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  bottom: 40px;
+  right: 50px;
+  box-shadow: 4px 4px 1em rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: #000;
+  font-size: 22px;
 }
 
 /* *******************Toggle Switch End****************** */

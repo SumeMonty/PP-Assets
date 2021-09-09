@@ -8,9 +8,6 @@ const contactbtn = document.querySelector('.contactbtn');
 
 
 if (window.matchMedia("(max-width:900px)").matches) {
-
-
-
   homebtn.addEventListener('click', hidemenu)
   aboutbtn.addEventListener('click', hidemenu)
   projectsbtn.addEventListener('click', hidemenu)
@@ -70,16 +67,16 @@ var typed = new Typed('.type', {
 // contactbtn.addEventListener('mouseover', contactbeforeeffect)
 
 
-$(document).ready(function () {
-  $(".homebtn").hover(
-    function () {
-      $(this).addClass("active");
-    },
-    function () {
-      $(this).removeClass("active");
-    }
-  );
-});
+// $(document).ready(function () {
+//   $(".homebtn").hover(
+//     function () {
+//       $(this).addClass("active");
+//     },
+//     function () {
+//       $(this).removeClass("active");
+//     }
+//   );
+// });
 // function homebeforeeffect() {
 //     if (!(homebtn.classList.contains('active'))) {
 //         homebtn.classList.add('active');
@@ -118,9 +115,26 @@ $(document).ready(function () {
 
 
 // Toggle Switch
-// const toggle = document.querySelector('#toggle');
 
-// toggle.addEventListener('change' => (){
+let body = document.querySelector('body');
+let sun = document.querySelector('#sun');
+let moon = document.querySelector('#moon');
+let toggle = document.querySelector('#toggle');
 
-// } );
+toggle.addEventListener('change',function(){
+  if(this.checked){
+    body.classList.remove('light');
+    body.classList.add('dark');
+    moon.style.display = 'block';
+    sun.style.display = 'none';
+  }
+  else
+  {
+    body.classList.remove('dark');
+    body.classList.add('dark');
+    moon.style.display = 'block';
+    sun.style.display = 'none';
+  }
+})
+
 // Toggle Switch
