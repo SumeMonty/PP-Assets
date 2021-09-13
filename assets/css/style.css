@@ -332,6 +332,12 @@ html {
   z-index: 0;
   background: var(--body-back);
 }
+
+.abouttext {
+  height: 300px;
+  width: 300px;
+  background-color: #777;
+}
 /* *******************About End****************** */
 
 /* *******************Projects****************** */
@@ -357,13 +363,13 @@ html {
 
 .dark-light-toggle {
 	width: 150px;
-	height: 70px;
+	height: 50px;
 	border-radius: 35px;
 	background: var(--bg-toggle);
 	color: var(--nav-text);
 	position: fixed;
 	bottom: 30px;
-	left: -65px;
+	left: -85px;
 	box-shadow: 4px 4px 1em rgba(0, 0, 0, 0.5);
 	display: flex;
 	justify-content: flex-end;
@@ -386,7 +392,7 @@ html {
 	outline: none;
 	border: none;
 	border-radius: 50%;
-	margin-right: 15px;
+	margin-right: 5px;
 	background-color: var(--bg-toggle);
 	color: var(--nav-text);
 	cursor: pointer;

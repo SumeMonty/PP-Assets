@@ -116,12 +116,14 @@ var typed = new Typed('.type', {
 
 // Toggle Switch
 
-let body = document.querySelector('body');
-let sun = document.querySelector('#sun');
-let moon = document.querySelector('#moon');
-let toggle = document.querySelector('#toggle');
-let togglediv = document.querySelector('.dark-light-toggle');
-let topbtn = document.querySelector('.movetotop');
+const body = document.querySelector('body');
+const sun = document.querySelector('#sun');
+const moon = document.querySelector('#moon');
+const toggle = document.querySelector('#toggle');
+const togglediv = document.querySelector('.dark-light-toggle');
+const topbtn = document.querySelector('.movetotop');
+const gifImg = document.querySelector('.gifimg');
+
 
 toggle.addEventListener('change', function () {
   if (this.checked) {
@@ -131,6 +133,7 @@ toggle.addEventListener('change', function () {
     sun.style.display = 'block';
     togglediv.style.boxShadow = '4px 0 1em 4px rgba(255, 255, 255, 0.5)';
     topbtn.style.boxShadow = '0 0 1em 5px rgba(255, 255, 255, 0.5)';
+    gifImg.src = "assets/img/programmer-darkbg.gif"
   }
   else {
     body.classList.remove('dark');
@@ -139,7 +142,9 @@ toggle.addEventListener('change', function () {
     sun.style.display = 'none';
     togglediv.style.boxShadow = '4px 0 1em 4px rgba(0, 0, 0, 0.5)';
     topbtn.style.boxShadow = '0 0 1em 5px rgba(0, 0, 0, 0.5)';
+    gifImg.src = "assets/img/programmer-lightbg.gif"
   }
 })
 
 // Toggle Switch
+
