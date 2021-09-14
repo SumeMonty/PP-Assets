@@ -47,7 +47,7 @@ var typed = new Typed('.type', {
 });
 // Typed JS Animation End
 
-//------------NAVBAR BG CHANGE ON SCROLL START-----------------
+// ------------NAVBAR BG CHANGE ON SCROLL START-----------------
 
 // window.addEventListener('scroll', function () {
 //     let navbar = this.document.querySelector('header');
@@ -146,5 +146,17 @@ toggle.addEventListener('change', function () {
   }
 })
 
+
+window.addEventListener('scroll', function () {
+  let navbar = this.document.querySelector('header');
+  let windowPosition = window.scrollY ;
+  if (windowPosition > 80) {
+    topbtn.style.display = 'block';
+    navbar.classList.add('scroll-active');
+  } else {
+    topbtn.style.display = 'none';
+    navbar.classList.remove('scroll-active');
+  }
+});
 // Toggle Switch
 
