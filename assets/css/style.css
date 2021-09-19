@@ -163,54 +163,7 @@ html {
   color: #2a57e0;
 }
 
-@media (max-width: 900px) {
-  .navbar .mainMenu {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    color: #000;
-    transition: top 0.3s ease;
-    display: none;
-  }
 
-  .navbar .mainMenu li a {
-    color: #000;
-  }
-
-  .navbar .mainMenu .closeMenu {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  .navbar .openMenu {
-    display: block;
-  }
-
-  .navbar .mainMenu li a:hover {
-    background: none;
-    font-size: 1.6rem;
-  }
-  .socialIcons i {
-    display: inline-block;
-    padding: 12px;
-  }
-  .socialIcons .fa-github:hover {
-    color: #e1419e;
-  }
-  .socialIcons .fa-linkedin:hover {
-    color: #2a57e0;
-  }
-}
 
 /* *******************Home****************** */
 .Home {
@@ -274,23 +227,7 @@ html {
   top: -20px;
 }
 
-@media (max-width: 900px) {
-  .Home {
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  .Home .text {
-    top: 100px;
-  }
-  .Home .text h2,
-  h3 {
-    color: #fff;
-  }
-  .gif {
-    display: none;
-  }
 
-}
 /* *******************Home End****************** */
 
 /* *******************About****************** */
@@ -394,3 +331,75 @@ html {
 }
 
 /* *******************Toggle Switch End****************** */
+
+
+/* *******************Media Queries****************** */
+@media (max-width: 900px) {
+  .navbar .mainMenu {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #000;
+    transition: top 0.3s ease;
+    display: none;
+  }
+
+  .navbar .mainMenu li a {
+    color: #000;
+  }
+
+  .navbar .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .navbar .openMenu {
+    display: block;
+  }
+
+  .navbar .mainMenu li a:hover {
+    background: none;
+    font-size: 1.6rem;
+  }
+  .socialIcons i {
+    display: inline-block;
+    padding: 12px;
+  }
+  .socialIcons .fa-github:hover {
+    color: #e1419e;
+  }
+  .socialIcons .fa-linkedin:hover {
+    color: #2a57e0;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .Home {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .Home .text {
+    top: 100px;
+  }
+  .Home .text h2,
+  h3 {
+    color: #fff;
+  }
+  .gif {
+    display: none;
+  }
+
+}
+/* *******************Media Queries****************** */
+
