@@ -16,19 +16,23 @@
 }
 
 :root {
-  --light-nav-back: rgba(255, 255, 255, 0.9);
+  --light-nav-back: rgba(255, 255, 255, 1);
   --light-nav-text: #000;
   --light-home-text: #000;
-  --light-bg-about: #f8edeb;
+  --light-about-back: #f8edeb;
+  --light-projects-back: #f8edeb;
+  --light-contact-back: #f8edeb;
   --light-home-span: #5e80e6;
   /* --light-nav-hover: #00ffff; */
   --light-body-back: #ffffff;
   --light-bg-about-div: #fff;
   --light-body-text: #000;
 
-  --dark-nav-back: rgba(000, 000, 000, 0.9);
+  --dark-nav-back: rgba(000, 000, 000, 1);
   --dark-nav-text: #fff;
-  --dark-bg-about: #343a40;
+  --dark-about-back: #343a40;
+  --dark-projects-back: #343a40;
+  --dark-contact-back: #343a40;
   --dark-home-text: #fff;
   --dark-home-span: #5e80e6;
   --dark-body-back: #000;
@@ -39,7 +43,9 @@
 .light {
   --nav-back: var(--light-nav-back);
   --nav-text: var(--light-nav-text);
-  --bg-about: var(--light-bg-about);
+  --about-back: var(--light-about-back);
+  --projects-back: var(--light-projects-back);
+  --contact-back: var(--light-contact-back);
   --bg-about-div: var(--light-bg-about-div);
   --body-back: var(--light-body-back);
   --body-text: var(--light-body-text);
@@ -50,7 +56,9 @@
 .dark {
   --nav-back: var(--dark-nav-back);
   --nav-text: var(--dark-nav-text);
-  --bg-about: var(--dark-bg-about);
+  --about-back: var(--dark-about-back);
+  --projects-back: var(--dark-projects-back);
+  --contact-back: var(--dark-contact-back);
   --bg-about-div: var(--dark-bg-about-div);
   --body-back: var(--dark-body-back);
   --body-text: var(--dark-body-text);
@@ -88,18 +96,10 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body {
-  font-family: 'Allura';
-} */
-
 .navbar {
-  -webkit-box-shadow: 0 8px 6px -6px #999;
-  -moz-box-shadow: 0 8px 6px -6px #999;
-  box-shadow: 0 8px 6px -6px #999;
+  /* box-shadow: 0 8px 6px -6px #999; */
   top: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 100;
+  z-index: 10;
   height: 10%;
   width: 100%;
   position: sticky;
@@ -107,14 +107,19 @@ html {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  transition: all .5s ease-in-out;
   padding: 0 25px;
+  background: rgb(192,62,152);
+  background: linear-gradient(90deg, rgba(192,62,152,1) 0%, rgba(232,214,210,1) 29%, rgba(205,232,219,1) 41%, rgba(80,181,184,1) 60%, rgba(43,126,174,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+.scroll-active{
   background: var(--nav-back);
-  /* box-shadow: #000; */
-  /* background: var(--nav-back); */
+	color: var(--nav-text);
 }
 .name {
   font-size: 20px;
-  color: var(--nav-text);
+  color: var(--dark-nav-text);
   margin: 6px;
   cursor: pointer;
 }
@@ -135,7 +140,7 @@ html {
   font-size: 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--nav-text);
+  color: var(--dark-nav-text);
   transition: all 1s ease-in-out;
   cursor: pointer;
   border-radius: 5px;
@@ -180,6 +185,8 @@ html {
   width: 100%;
   z-index: 0;
   background: var(--body-back);
+  background: rgb(192,62,152);
+background: linear-gradient(90deg, rgba(192,62,152,1) 0%, rgba(232,214,210,1) 29%, rgba(205,232,219,1) 41%, rgba(80,181,184,1) 60%, rgba(43,126,174,1) 100%, rgba(0,212,255,1) 100%);
   background-position: 0 -90px;
   display: flex;
   /* justify-content: space-between; */
@@ -243,7 +250,7 @@ html {
 .About {
 	width: 100%;
 	height: 100vh;
-	background: var(--bg-about);
+	background: var(--about-back);
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
@@ -363,7 +370,7 @@ html {
   height: 100vh;
   width: 100%;
   z-index: 0;
-  background: var(--body-back);
+  background: var(--projects-back);
 }
 /* *******************Projects End****************** */
 
@@ -372,7 +379,7 @@ html {
   height: 100vh;
   width: 100%;
   z-index: 0;
-  background: var(--body-back);
+  background: var(--contact-back);
 }
 /* *******************Contact End****************** */
 
